@@ -1,0 +1,43 @@
+extends layout
+block content
+    nav.breadcrumb
+        a(href="/").breadcrumb-item Employee List
+        a(href="/addEmployee").breadcrumb-item Add Employee
+    
+    form(action="/")
+        .form-row
+            .form-group.col-md-6
+                label(for="name") Name
+                input(type="text" id="name").form-control
+            .form-group.col-md-6
+                label(for="surname") Surname
+                input(type="text" id="surname").form-control
+        .form-row
+            .form-group.col-md-3
+                label(for="phone") Phone
+                input(type="telephone" id="phone").form-control
+            .form-group.col-md-3
+                label(for="email") Email
+                input(type="email" id="email").form-control
+            .form-group.col-md-3
+                label(for="address") Address
+                input(type="address" id="address").form-control
+            .form-group.col-md-3
+                label(for="city") City
+                input(type="address" id="city").form-control
+        .form-row
+            .form-group.col-md-3
+                label(for="occupation") Occupation
+                select(id="occupation").form-control
+                    option Manager
+                    option Employee
+        .form-row
+            .form-check.col-md-3
+                label.form-check-label
+                        input(type="checkbox" value=status checked).form-check-input
+                        | Active
+                
+        .form-row
+            .form-group.col-md-6
+                button(type="submit" id="submit").btn.btn-primary Add New Employee
+                button(type="submit" id="cancel").btn.btn-warning Cancel

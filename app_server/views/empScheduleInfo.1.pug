@@ -1,0 +1,554 @@
+extends layout
+block content
+    .container
+            nav.breadcrumb
+                a(href="/").breadcrumb-item Employee List
+                a(href="/empscheduleinfo").breadcrumb-item Employee Schedule Info
+            h4 {Employee Name Here} Schedule Info
+            form(action="")
+                .form-row
+                    .form-group.col-md-2
+                        label(for="month") Select month
+                        select(id="month").form-control
+                            - var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                            each month in months
+                                option= month
+            table.table.table-hover.table-bordered.table-responsive.tableschedule
+                thead
+                    tr
+                        th Day
+                        th Start
+                        th(colspan="2") 1st Break
+                        th(colspan="2") Lunch
+                        th(colspan="2") 2n Break
+                        th Finish
+                        th Length
+                tbody
+                    tr
+                        td 1
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:01
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:02
+                    tr
+                        td 2
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:05
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:10
+                    tr
+                        td 3
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:05
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:10
+                    tr
+                        td 4
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 5
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 6
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 7
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 8
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 9
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 10
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 11
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 12
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 13
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 14
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 15
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 16
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 17
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 18
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 19
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 20
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 21
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 22
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 23
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 24
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 25
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 26
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 27
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 28
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 29
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 30
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+                    tr
+                        td 31
+                        td 08:00
+                        td 10:00
+                        td 10:15
+                        td 12:00
+                        td 12:30
+                        td 14:30
+                        td 14:45
+                        td 16:00
+                        td 08:00
+                    tr
+                        td Clocked in
+                        td(colspan="2") 08:10
+                        td(colspan="4")
+                        td Clocked out
+                        td(colspan="2") 16:11
+

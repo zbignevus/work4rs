@@ -1,0 +1,44 @@
+extends layout
+block content
+    nav.breadcrumb
+        a(href="/").breadcrumb-item Employee List
+        a(href="/addEmployee").breadcrumb-item Employee Details
+    h2= title
+            form(action="/")
+                .form-row
+                    .form-group.col-md-6
+                        label(for="name") Name
+                        input(type="text" id="name" value=name).form-control
+                    .form-group.col-md-6
+                        label(for="surname") Surname
+                        input(type="text" id="surname" value=surname).form-control
+                .form-row
+                    .form-group.col-md-3
+                        label(for="phone") Phone
+                        input(type="telephone" id="phone" value=phone).form-control
+                    .form-group.col-md-3
+                        label(for="email") Email
+                        input(type="email" id="email" value=email).form-control
+                    .form-group.col-md-3
+                        label(for="address") Address
+                        input(type="address" id="address" value=address).form-control
+                    .form-group.col-md-3
+                        label(for="city") City
+                        input(type="address" id="city" value=city).form-control
+                .form-row
+                    .form-group.col-md-3
+                        label(for="occupation") Occupation
+                        select(id="occupation").form-control
+                            option Manager
+                            option Employee
+                .form-row
+                    .form-check.col-md-3
+                        label.form-check-label
+                                input(type="checkbox" value="" checked).form-check-input
+                                | #{status}
+                        
+                .form-row
+                    .form-group.col-md-6
+                        button(type="submit" id="submit").btn.btn-primary.gradient Save & Close
+                        button(type="submit" id="cancel").btn.btn-warning Cancel
+

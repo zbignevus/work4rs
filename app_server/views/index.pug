@@ -1,0 +1,43 @@
+extends layout
+
+block content
+		.row
+			.col
+				nav.breadcrumb
+					a(href="/").breadcrumb-item Employee List
+			.col
+				a(href="/addemployee" role="button").btn.btn-warning.btn-sm.pull-right.anebutton
+					i(aria-hidden="true").fa.fa-plus Add New Employee
+		.row
+			.col
+				table.table.table-hover.table-bordered.table-responsive-sm
+					thead
+						tr
+							th #
+							th Name
+							th Surname
+							th Email
+							th Phone
+							th Occupation
+							th Status
+							th Actions
+					tbody
+						each employee in employees
+							tr
+								th(scope="row")=employee.id
+								td=employee.name
+								td=employee.surname
+								td=employee.email
+								td=employee.phone
+								td=employee.occupation
+								td=employee.status
+								td 
+									a(href='/empdetails' role="button").btn.btn-primary.btn-sm
+										i(aria-hidden="true").fa.fa-pencil  Edit
+									a(href="/empscheduleinfo" role="button").btn.btn-warning.btn-sm
+										i(aria-hidden="true").fa.fa-calendar  Schedule Info
+
+
+
+
+

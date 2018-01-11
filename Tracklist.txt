@@ -1,0 +1,42 @@
+This is a description file for my project
+
+First among two apps that I am planning on creating, namely an employee management and invoicing application.
+
+Employee Management application
+
+
+MINIMUM PLAN
+Main page lists all of the employees
+CRUD Operation on each employee
+
+MAXIMUM PLAN
+Filterable/Searchable Employee lists
+Able to send emails to each employee
+Employee grouping, easy add/del.
+Authentication
+Angular SPA
+
+--------------------------------------------------------
+
+PROTOTYPE PHASE
+Install the Express template (complete)
+Install nodemon (complete)
+create routes & view files (complete)
+Take the controller code out of routes into a separate file (complete)
+Create view prototypes by hardcoding data into them (complete)
+    Employee List (complete)
+    Employee Details (complete)
+    Add New Employee (complete)
+    Schedule Info (complete)
+Take the data out of the views and place them into their controllers (complete)
+
+
+DEVELOPMENT? PHASE
+    create a mongoose connection file (complete)
+    develop a mongodb model schema using mongoose (complete)
+    create database entries for the schema to refer to (complete)
+
+API CREATION PHASE
+    Define API endpoints (complete)
+    Specify API request/response through controllers
+

@@ -1,0 +1,48 @@
+extends layout
+block content
+    .container
+            nav.breadcrumb
+                a(href="/").breadcrumb-item Employee List
+                a(href="/empscheduleinfo").breadcrumb-item Employee Schedule Info
+            h4 #{name} #{surname} Schedule Info
+            form(action="")
+                .form-row
+                    .form-group.col-md-2
+                        label(for="month") Select month
+                        select(id="month").form-control
+                            - var months = ["January", "February", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+                            each mon in months
+                                if(mon === month)
+                                    option(selected)= mon
+                                else
+                                    option= mon
+            table.table.table-hover.table-bordered.table-responsive.tableschedule
+                thead
+                    tr
+                        th Day
+                        th Start
+                        th(colspan="2") 1st Break
+                        th(colspan="2") Lunch
+                        th(colspan="2") 2n Break
+                        th Finish
+                        th Length
+                tbody
+                    each day in days
+                        tr
+                            td= day.date
+                            td= day.time.shiftStart
+                            td= day.time.shift1stBreakStart
+                            td= day.time.shift1stBreakEnd
+                            td= day.time.shiftLunchStart
+                            td= day.time.shiftLunchEnd
+                            td= day.time.shift2ndBreakStart
+                            td= day.time.shift2ndBreakEnd
+                            td= day.time.shiftFinish
+                            td= day.time.shiftLength
+                        tr
+                            td Clocked in
+                            td(colspan="2")= day.clockedIn
+                            td(colspan="4")
+                            td Clocked out
+                            td(colspan="2")= day.clockedOut
+

@@ -1,0 +1,15 @@
+extends layout
+block content
+    .container
+        .row
+            .col.text-center
+                if(clockStatus==="clocked out")
+                    button(id="clockin").btn.btn-lg.btn-success.clockbutton Clock in 
+                        i(aria-hidden="true").fa.fa-check
+                else if(clockStatus==="clocked in")
+                    button(id="clockout").btn.btn-lg.btn-danger.clockbutton Clock out 
+                        i(aria-hidden="true").fa.fa-times
+        .row
+            .col.text-center
+                button(id="break").btn.btn-sm.btn-primary.breakbutton=empbreak
+                button(id="lunch").btn.btn-sm.btn-warning.lunchbutton=lunch
